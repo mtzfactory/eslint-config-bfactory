@@ -10,6 +10,14 @@
     "url": "https://github.com/mtzfactory/eslint-config-bfactory/issues"
   },
   "homepage": "https://github.com/mtzfactory/eslint-config-bfactory#readme",
+  "files": [
+    ".vscode",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.json",
+    "index.js",
+    "prettier.config.js"
+  ],
   "scripts": {
     "lint": "eslint .",
     "lint:no-cycles": "yarn lint --rule 'import/no-cycle: 2'",
