@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
+
+valid_branch_regex='^((main|master)|(doc|feature|feat|fix|poc|refactor|setup|style|test)\/[a-zA-Z0-9\-]+)|(release\/v([0-9]+\.){2}([0-9]+))$'
+
+message="\n💥 There is something wrong with your branch name.
+
+Branch names in this project must adhere to this contract: 
+\033[33;1m$valid_branch_regex\033[0m
+
+Your commit will be rejected.
+You should rename your branch to a valid name and try again.\n"
+
+if [[ ! $local_branch_name =~ $valid_branch_regex ]]; then
+    echo -e "$message"
+    exit 1
+fi
+
