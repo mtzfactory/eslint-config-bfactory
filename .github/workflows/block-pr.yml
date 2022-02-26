@@ -1,0 +1,17 @@
+name: Block PR
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+
+jobs:
+  tag-blocked:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Dreamcodeio/pr-has-label-action@master
+      id: checkLabel
+      with:
+        label: ":skull_and_crossbones: blocked"
+    - name: Fails if "pull_request" has "${{ steps.checkLabel.outputs.checkedLabel }}" label 
+      if: ${{ steps.checkLabel.outputs.hasLabel }}
+      run: exit 1 
