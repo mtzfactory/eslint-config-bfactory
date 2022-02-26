@@ -1,0 +1,13 @@
+{
+  "name": "@mtzfactory/eslint-config-bfactory",
+  "version": "0.1.0",
+  "description": "Eslint configuration for projects done with React",
+  "main": "index.js",
+  "repository": "https://github.com/mtzfactory/eslint-config-bfactory",
+  "author": "Ricardo Martínez <ricardo.martinez.monje@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtzfactory/eslint-config-bfactory/issues"
+  },
+  "homepage": "https://github.com/mtzfactory/eslint-config-bfactory#readme"
+}
