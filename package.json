@@ -9,5 +9,8 @@
   "bugs": {
     "url": "https://github.com/mtzfactory/eslint-config-bfactory/issues"
   },
-  "homepage": "https://github.com/mtzfactory/eslint-config-bfactory#readme"
+  "homepage": "https://github.com/mtzfactory/eslint-config-bfactory#readme",
+  "scripts": {
+    "postinstall": "[ -d ./scripts ] && ./scripts/post-install.sh || exit 0;"
+  }
 }
