@@ -16,3 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setup continuous deployment action
 - Setup action to block pull request
 - Add Eslint and Prettier rules
+- Configure files to be published
