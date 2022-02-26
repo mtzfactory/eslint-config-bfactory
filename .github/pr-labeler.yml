@@ -1,0 +1,9 @@
+":memo: documentation": "doc/*"
+":star2: feature": ["feature/*", "feat/*"]
+":adhesive_bandage: fix": "fix/*"
+":mag: poc": "poc/*"
+":wrench: refactor": "refactor/*"
+":unicorn: release": "release/v*"
+":floppy_disk: setup": "setup/*"
+":lipstick: style": "style/*"
+":interrobang: test": "test/*"
