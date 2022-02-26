@@ -13,3 +13,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setup git pre push hook to check branch name
 - Setup pull request auto label action based in branch name
 - Setup continuous integration action
+- Setup continuous deployment action
