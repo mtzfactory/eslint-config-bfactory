@@ -3,8 +3,9 @@
     "standard",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
+    "plugin:import/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
     "prettier"
   ],
   "root": true,
@@ -14,7 +15,7 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "react", "eslint-plugin-sort-keys-fix"],
+  "plugins": ["@typescript-eslint", "import", "react", "sort-keys-fix"],
   "settings": {
     "react": {
       "version": "detect"
