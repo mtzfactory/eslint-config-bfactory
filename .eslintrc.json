@@ -15,7 +15,7 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "imort", "react", "sort-keys-fix"],
+  "plugins": ["@typescript-eslint", "import", "react", "sort-keys-fix"],
   "settings": {
     "react": {
       "version": "detect"
