@@ -1,6 +1,6 @@
 {
   "name": "@mtzfactory/eslint-config-bfactory",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Eslint configuration for projects done with React",
   "main": "index.js",
   "repository": "https://github.com/mtzfactory/eslint-config-bfactory",
