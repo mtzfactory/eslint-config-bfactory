@@ -7,16 +7,16 @@ This library aims to help apply the same code styling to all the React projects.
 ### GitHub package registry
 
 Before installing the project dependencies, you'll need to allow NPM to access
-Paack's GitHub-hosted packages.
+[GitHub hosted packages](https://docs.github.com/en/packages/quickstart).
 
-For that, you'll need a "personal access token" with the read:packages scope.
+For that, you'll need a personal access token or PAT with the `read:packages` scope.
 You can create one in your GitHub account's settings. If you're planning to
-create/update some packages, then also include the write:packages scope.
+create/update some packages, then also include the `write:packages` scope.
 
 Once you have the token in hands, add it to your users' settings:
 
 ```
-$ npm config set "//npm.pkg.github.com/:_authToken=${TOKEN_GOES_HERE}"
+$ npm config set "//npm.pkg.github.com/:_authToken=${PERSONAL_ACCESS_TOKEN}"
 ```
 
 If that worked well, you'll find your token in `~/.npmrc` in a line like this:
@@ -25,12 +25,19 @@ If that worked well, you'll find your token in `~/.npmrc` in a line like this:
 //npm.pkg.github.com/:_authToken=ghp_allWeHearIsRadioGaGaRadioBlaBla
 ```
 
+Add an NPM configuration file for the consumer project by creating a `.npmrc` file
+in the root directory with the contents:
+
+```
+@mtzfactory:registry=https://npm.pkg.github.com
+```
+
 ### Install the package
 
 Install the module as a dev dependency:
 
 ```bash
-$ yarn add --dev eslint-config-bfactory
+$ yarn add --dev @mtzfactory/eslint-config-bfactory
 ```
 
 After installing the module:
@@ -39,7 +46,7 @@ After installing the module:
 
 ```javascript
 module.exports = {
-  extends: ['eslint-config-bfactory'],
+  extends: ['@mtzfactory/eslint-config-bfactory/{react/react-native}'],
 };
 ```
 
@@ -47,6 +54,23 @@ module.exports = {
 
 ```javascript
 module.exports = require('eslint-config-bfactory/prettier.config');
+```
+
+3. Optionally add import resolver config to the local Eslint configuration file:
+
+```javascript
+module.exports = {
+  ...
+  settings: {
+    ...
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
+  },
+  ...
+}
 ```
 
 ## What does this includes
