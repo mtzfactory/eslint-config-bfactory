@@ -14,12 +14,13 @@
     ".vscode",
     ".editorconfig",
     ".eslintignore",
-    ".eslintrc.json",
-    "index.js",
-    "prettier.config.js"
+    "prettier.config.js",
+    "react-native.js",
+    "react.js"
   ],
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint -c react.js .",
+    "lint:native": "eslint -c react-native.js",
     "lint:no-cycles": "yarn lint --rule 'import/no-cycle: 2'",
     "postinstall": "[ -d ./scripts ] && ./scripts/post-install.sh || exit 0;"
   },
