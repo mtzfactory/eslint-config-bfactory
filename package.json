@@ -14,12 +14,13 @@
     ".vscode",
     ".editorconfig",
     ".eslintignore",
-    ".eslintrc.json",
-    "index.js",
-    "prettier.config.js"
+    "prettier.config.js",
+    "react-native.js",
+    "react.js"
   ],
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint -c react.js .",
+    "lint:native": "eslint -c react-native.js",
     "lint:no-cycles": "yarn lint --rule 'import/no-cycle: 2'",
     "postinstall": "[ -d ./scripts ] && ./scripts/post-install.sh || exit 0;"
   },
@@ -28,6 +29,7 @@
     "@typescript-eslint/parser": "^5.10.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
+    "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
@@ -36,7 +38,9 @@
     "prettier": "^2.5.1"
   },
   "devDependencies": {
-    "eslint": "^8.8.0",
+    "@babel/core": "^7.17.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "eslint": "^8.10.0",
     "typescript": "^4.5.5"
   },
   "peerDependencies": {
